@@ -1,0 +1,180 @@
+.admin-page {
+    max-width: 1400px;
+}
+
+/* Overview */
+.admin-overview {
+    padding: var(--space-4) 0;
+}
+
+.overview-stats {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-4);
+}
+
+.overview-stat {
+    text-align: center;
+}
+
+.overview-stat .stat-value {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent-primary);
+}
+
+.overview-stat .stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+}
+
+/* Section headers */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-4);
+}
+
+.section-header h3 {
+    font-size: var(--font-size-lg);
+    margin: 0;
+}
+
+/* Status badges */
+.status-badge {
+    display: inline-flex;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    text-transform: capitalize;
+}
+
+.status-active {
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
+}
+
+.status-archived {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-muted);
+}
+
+/* Role badges */
+.role-badge {
+    display: inline-flex;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    text-transform: capitalize;
+}
+
+.role-admin {
+    background-color: rgba(6, 182, 212, 0.15);
+    color: var(--color-accent-primary);
+}
+
+.role-clinician {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-secondary);
+}
+
+/* Action tags */
+.action-tag {
+    display: inline-flex;
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.action-login {
+    background-color: var(--color-info-bg);
+    color: var(--color-info);
+}
+
+.action-logout {
+    background-color: var(--color-bg-tertiary);
+    color: var(--color-text-muted);
+}
+
+.action-predict {
+    background-color: rgba(6, 182, 212, 0.15);
+    color: var(--color-accent-primary);
+}
+
+.action-password-reset,
+.action-password-change {
+    background-color: var(--color-warning-bg);
+    color: var(--color-warning);
+}
+
+.action-login-failed {
+    background-color: var(--color-danger-bg);
+    color: var(--color-danger);
+}
+
+/* Action buttons */
+.action-buttons {
+    display: flex;
+    gap: var(--space-2);
+}
+
+/* User form */
+.user-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Settings */
+.settings-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-4) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.setting-item:last-child {
+    border-bottom: none;
+}
+
+.setting-name {
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    margin-bottom: var(--space-1);
+}
+
+.setting-desc {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.setting-value {
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-accent-primary);
+    padding: var(--space-2) var(--space-4);
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+}
+
+@media (max-width: 1200px) {
+    .overview-stats {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .overview-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

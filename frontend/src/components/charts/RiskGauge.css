@@ -1,0 +1,109 @@
+.risk-gauge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: var(--space-4);
+}
+
+.risk-gauge-sm .gauge-visual {
+    width: 120px;
+}
+
+.risk-gauge-md .gauge-visual {
+    width: 160px;
+}
+
+.risk-gauge-lg .gauge-visual {
+    width: 200px;
+}
+
+.gauge-visual {
+    margin-bottom: var(--space-2);
+}
+
+.gauge-svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.gauge-value-arc {
+    transition: stroke-dashoffset 0.5s ease-out;
+}
+
+.gauge-score {
+    font-size: 24px;
+    font-weight: var(--font-weight-bold);
+    fill: var(--color-text-primary);
+}
+
+.gauge-label {
+    font-size: 10px;
+    fill: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.gauge-classification {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: var(--space-4);
+}
+
+.gauge-probabilities {
+    width: 100%;
+    max-width: 200px;
+}
+
+.prob-title {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-3);
+    text-align: center;
+}
+
+.prob-bars {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.prob-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.prob-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-secondary);
+}
+
+.prob-bar-bg {
+    height: 6px;
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.prob-bar {
+    height: 100%;
+    border-radius: var(--radius-full);
+    transition: width 0.5s ease-out;
+}
+
+.prob-bar-normal {
+    background-color: var(--color-success);
+}
+
+.prob-bar-suspect {
+    background-color: var(--color-warning);
+}
+
+.prob-bar-pathologic {
+    background-color: var(--color-danger);
+}

@@ -1,0 +1,316 @@
+.dashboard-page {
+    max-width: 1400px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--space-6);
+}
+
+.header-actions {
+    display: flex;
+    gap: var(--space-3);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+}
+
+.stat-card {
+    cursor: pointer;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    text-align: center;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.stat-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-2);
+    padding: var(--space-2) 0;
+}
+
+.stat-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-2);
+}
+
+.stat-icon-wrapper.total {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border: 2px solid rgba(6, 182, 212, 0.3);
+}
+
+.stat-icon-wrapper.critical {
+    background: linear-gradient(135deg, var(--color-danger-bg) 0%, rgba(239, 68, 68, 0.1) 100%);
+    border: 2px solid rgba(239, 68, 68, 0.3);
+}
+
+.stat-icon-wrapper.warning {
+    background: linear-gradient(135deg, var(--color-warning-bg) 0%, rgba(251, 191, 36, 0.1) 100%);
+    border: 2px solid rgba(251, 191, 36, 0.3);
+}
+
+.stat-icon-wrapper.success {
+    background: linear-gradient(135deg, var(--color-success-bg) 0%, rgba(34, 197, 94, 0.1) 100%);
+    border: 2px solid rgba(34, 197, 94, 0.3);
+}
+
+.stat-icon {
+    font-size: 1.5rem;
+}
+
+.stat-value {
+    font-size: var(--font-size-3xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    line-height: 1;
+}
+
+.stat-card.stat-critical .stat-value {
+    color: var(--color-danger);
+}
+
+.stat-card.stat-warning .stat-value {
+    color: var(--color-warning);
+}
+
+.stat-card.stat-success .stat-value {
+    color: var(--color-success);
+}
+
+.stat-label {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
+}
+
+/* Dashboard Grid */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+}
+
+/* Alerts */
+.alerts-card {
+    grid-column: span 2;
+}
+
+.alerts-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.alert-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-sm);
+}
+
+.alert-item.alert-high,
+.alert-item.alert-danger {
+    background-color: var(--color-danger-bg);
+    border-left: 3px solid var(--color-danger);
+}
+
+.alert-item.alert-warning {
+    background-color: var(--color-warning-bg);
+    border-left: 3px solid var(--color-warning);
+}
+
+.alert-item.alert-info {
+    background-color: var(--color-info-bg);
+    border-left: 3px solid var(--color-info);
+}
+
+.alert-time {
+    color: var(--color-text-muted);
+    font-size: var(--font-size-xs);
+    min-width: 80px;
+}
+
+.alert-message {
+    flex: 1;
+}
+
+.no-alerts {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    padding: var(--space-6);
+    color: var(--color-success);
+    font-size: var(--font-size-sm);
+}
+
+.no-alerts-icon {
+    font-size: 1.5rem;
+}
+
+/* Recent Patients */
+.recent-patients {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.patient-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-3);
+    background-color: var(--color-bg-tertiary);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+}
+
+.patient-row:hover {
+    background-color: var(--color-bg-secondary);
+}
+
+.patient-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.patient-id {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-accent-primary);
+}
+
+.patient-name {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.patient-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.patient-room {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/* Model Info */
+.model-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.model-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.model-name {
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+}
+
+.model-version {
+    font-size: var(--font-size-sm);
+    color: var(--color-accent-primary);
+    background-color: rgba(6, 182, 212, 0.15);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+}
+
+.model-type {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+}
+
+.model-metrics {
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+    border-top: 1px solid var(--color-border);
+}
+
+.model-metrics .metric {
+    text-align: center;
+}
+
+.model-metrics .metric-value {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-accent-primary);
+}
+
+.model-metrics .metric-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+.model-link {
+    margin-top: var(--space-2);
+}
+
+.no-model {
+    text-align: center;
+    padding: var(--space-6);
+    color: var(--color-text-muted);
+}
+
+/* Quick Actions */
+.quick-actions {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+}
+
+.quick-actions .btn {
+    justify-content: flex-start;
+}
+
+@media (max-width: 1024px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .alerts-card {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .quick-actions {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,98 @@
+.metrics-chart-container {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-6);
+}
+
+.metrics-chart-title {
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-primary);
+    margin: 0 0 var(--space-4) 0;
+}
+
+/* Tooltip */
+.metrics-tooltip {
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: var(--space-3);
+    box-shadow: var(--shadow-lg);
+}
+
+.tooltip-date {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-2);
+}
+
+.tooltip-value {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+}
+
+.tooltip-value strong {
+    color: var(--color-accent-primary);
+}
+
+.tooltip-predictions {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    margin-top: var(--space-1);
+}
+
+/* Metric Card */
+.metric-card {
+    background-color: var(--color-bg-card);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+}
+
+.metric-label {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.metric-value {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-primary);
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-1);
+}
+
+.metric-unit {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-normal);
+    color: var(--color-text-muted);
+}
+
+.metric-trend {
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+}
+
+.metric-trend.positive {
+    color: var(--color-success);
+}
+
+.metric-trend.negative {
+    color: var(--color-danger);
+}
+
+/* Compact variant */
+.metric-card-compact {
+    padding: var(--space-3);
+}
+
+.metric-card-compact .metric-value {
+    font-size: var(--font-size-xl);
+}

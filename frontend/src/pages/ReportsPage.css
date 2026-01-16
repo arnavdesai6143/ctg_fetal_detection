@@ -1,0 +1,123 @@
+.reports-page {
+    max-width: 1200px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.filters-card {
+    margin-bottom: var(--space-6);
+}
+
+.filters-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-4);
+}
+
+.patient-link {
+    color: var(--color-accent-primary);
+    font-weight: var(--font-weight-medium);
+}
+
+.status-pill {
+    display: inline-flex;
+    padding: var(--space-1) var(--space-3);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-medium);
+    text-transform: capitalize;
+}
+
+.status-completed {
+    background-color: var(--color-success-bg);
+    color: var(--color-success);
+}
+
+.status-pending {
+    background-color: var(--color-warning-bg);
+    color: var(--color-warning);
+}
+
+.report-actions {
+    display: flex;
+    gap: var(--space-2);
+}
+
+/* Generate Form */
+.generate-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+/* Report Preview */
+.report-preview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.preview-header {
+    text-align: center;
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.preview-header h3 {
+    font-size: var(--font-size-xl);
+    margin: 0 0 var(--space-2) 0;
+}
+
+.preview-header p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    margin: var(--space-1) 0;
+}
+
+.preview-section h4 {
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0 0 var(--space-3) 0;
+}
+
+.preview-section p {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-secondary);
+    margin: var(--space-1) 0;
+}
+
+.preview-risk {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.preview-footer {
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--color-border);
+}
+
+.preview-footer p {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    font-style: italic;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .page-header {
+        flex-direction: column;
+        gap: var(--space-4);
+    }
+
+    .filters-row {
+        grid-template-columns: 1fr;
+    }
+}
